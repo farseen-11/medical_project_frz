@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+
+    <!-- Optional: Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-grad-1: #050816;
+            --bg-grad-2: #1a1034;
+            --accent: #7c3aed;
+            --accent-soft: rgba(124, 58, 237, 0.25);
+            --accent-neon: #4ade80;
+            --danger: #f97373;
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+            --card-bg: rgba(15, 23, 42, 0.85);
+            --card-border: rgba(148, 163, 184, 0.4);
+            --input-bg: rgba(15, 23, 42, 0.85);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-main);
+            background:
+                radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.15), transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(129, 140, 248, 0.15), transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(52, 211, 153, 0.15), transparent 50%),
+                linear-gradient(145deg, var(--bg-grad-1), var(--bg-grad-2));
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Floating gradient orbs */
+        .orb {
+            position: absolute;
+            border-radius: 999px;
+            filter: blur(40px);
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        .orb.orb-1 {
+            width: 260px;
+            height: 260px;
+            background: rgba(56, 189, 248, 0.55);
+            top: -80px;
+            left: -60px;
+            animation: float1 15s infinite alternate ease-in-out;
+        }
+        .orb.orb-2 {
+            width: 320px;
+            height: 320px;
+            background: rgba(129, 140, 248, 0.45);
+            bottom: -120px;
+            right: -80px;
+            animation: float2 18s infinite alternate ease-in-out;
+        }
+        @keyframes float1 {
+            from { transform: translate3d(0, 0, 0); }
+            to   { transform: translate3d(40px, 60px, 0); }
+        }
+        @keyframes float2 {
+            from { transform: translate3d(0, 0, 0); }
+            to   { transform: translate3d(-60px, -40px, 0); }
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 24px;
+            left: 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 14px;
+            text-decoration: none;
+            color: var(--text-main);
+            background: rgba(15, 23, 42, 0.55);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            transition: all 0.18s ease-out;
+        }
+
+        .back-btn span {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .back-btn:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.4),
+                        0 18px 35px rgba(15, 23, 42, 0.9);
+            transform: translateY(-1px);
+        }
+
+        .card {
+            position: relative;
+            z-index: 1;
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 28px 30px 26px;
+            width: 340px;
+            border: 1px solid var(--card-border);
+            box-shadow:
+                0 24px 60px rgba(15, 23, 42, 0.9),
+                0 0 0 1px rgba(148, 163, 184, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 22px;
+        }
+
+        .card-title {
+            text-align: left;
+        }
+
+        .card-title h2 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .card-title p {
+            margin: 4px 0 0;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .badge {
+            font-size: 11px;
+            padding: 4px 9px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: #e5e7eb;
+            border: 1px solid rgba(129, 140, 248, 0.4);
+        }
+
+        .icon-lock {
+            width: 36px;
+            height: 36px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 30%, var(--accent-neon), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #0b1020;
+            box-shadow:
+                0 0 18px rgba(74, 222, 128, 0.4),
+                inset 0 0 0 1px rgba(15, 23, 42, 0.7);
+        }
+
+        .field {
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .field label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .field input {
+            width: 100%;
+            padding: 9px 11px;
+            border-radius: 10px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            background: var(--input-bg);
+            color: var(--text-main);
+            font-size: 13px;
+            outline: none;
+            transition: all 0.18s ease-out;
+        }
+
+        .field input::placeholder {
+            color: rgba(148, 163, 184, 0.8);
+        }
+
+        .field input:focus {
+            border-color: var(--accent);
+            box-shadow:
+                0 0 0 1px rgba(129, 140, 248, 0.4),
+                0 0 0 6px rgba(129, 140, 248, 0.07);
+        }
+
+        button {
+            width: 100%;
+            padding: 11px 12px;
+            border-radius: 999px;
+            border: none;
+            margin-top: 8px;
+            background: linear-gradient(135deg, var(--accent), #4f46e5);
+            color: #f9fafb;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.03em;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            box-shadow:
+                0 18px 40px rgba(79, 70, 229, 0.65),
+                0 0 18px rgba(79, 70, 229, 0.55);
+            transition: all 0.18s ease-out;
+        }
+
+        button span {
+            font-size: 16px;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow:
+                0 23px 50px rgba(79, 70, 229, 0.85),
+                0 0 22px rgba(74, 222, 128, 0.55);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow:
+                0 12px 30px rgba(15, 23, 42, 0.95);
+        }
+
+        #msg {
+            margin-top: 10px;
+            font-size: 12px;
+            min-height: 16px;
+            color: var(--danger);
+            text-align: left;
+        }
+
+        .hint {
+            margin-top: 8px;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: left;
+        }
+
+        /* Welcome overlay */
+        #welcomeOverlay {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.25), transparent 55%),
+                radial-gradient(circle at 100% 90%, rgba(74, 222, 128, 0.2), transparent 55%),
+                linear-gradient(135deg, #111827, #020617);
+            z-index: 999;
+            color: #e5e7eb;
+        }
+
+        #welcomeInner {
+            padding: 22px 28px;
+            border-radius: 18px;
+            background: rgba(15, 23, 42, 0.92);
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            box-shadow:
+                0 24px 60px rgba(15, 23, 42, 0.95),
+                0 0 0 1px rgba(148, 163, 184, 0.16);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            animation: pop 0.6s ease;
+        }
+
+        #welcomeInner span {
+            color: var(--accent-neon);
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.75); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<a href="first_page.html" class="back-btn">
+    <span>←</span>
+    <span>Back</span>
+</a>
+
+<div class="card">
+    <div class="card-header">
+        <div class="card-title">
+            <h2>Sign in</h2>
+            <p>Secure access to your medical workspace</p>
+        </div>
+        <div class="icon-lock">🔐</div>
+    </div>
+
+    <div style="height: 14px;"></div>
+
+    <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Name" autocomplete="name" required>
+    </div>
+
+    <div class="field">
+        <label for="phone">Phone</label>
+        <input id="phone" type="text" placeholder="+............" autocomplete="tel" required>
+    </div>
+
+    <div class="field">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="••••••••••" autocomplete="current-password" required>
+    </div>
+
+    <button type="button" onclick="signin()">
+        <span>Sign In</span>
+        <span>›</span>
+    </button>
+
+    <div id="msg"></div>
+    <div class="hint">
+        Tip: use your registered credentials. Contact admin if you face issues.
+    </div>
+</div>
+
+<!-- Welcome overlay -->
+<div id="welcomeOverlay">
+    <div id="welcomeInner">
+        Welcome, <span id="welcomeName"></span>
+    </div>
+</div>
+
+<script>
+async function signin() {
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const password = document.getElementById("password").value;
+
+    const msgEl = document.getElementById("msg");
+    msgEl.style.color = "var(--text-muted)";
+    msgEl.textContent = "Authenticating…";
+
+    try {
+        const res = await fetch("http://127.0.0.1:8000/signin", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, phone, password })
+        });
+
+        const result = await res.json().catch(() => ({}));
+
+        if (res.ok) {
+            // Show welcome overlay with name
+            const overlay = document.getElementById("welcomeOverlay");
+            const welcomeName = document.getElementById("welcomeName");
+            welcomeName.textContent = name || "Patient";
+            overlay.style.display = "flex";
+
+            // Clear status text
+            msgEl.textContent = "";
+
+            // Redirect after 2 seconds
+            setTimeout(() => {
+                window.location.href = "main.html?name=" + encodeURIComponent(name);
+            }, 2000);
+        } else {
+            msgEl.style.color = "var(--danger)";
+            msgEl.textContent = result.detail || "Sign in failed. Check your credentials.";
+        }
+    } catch (err) {
+        msgEl.style.color = "var(--danger)";
+        msgEl.textContent = "Network error. Please try again.";
+    }
+}
+</script>
+
+</body>
+</html>

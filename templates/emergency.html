@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emergency Hospitals</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-grad-1: #111827;
+            --bg-grad-2: #7f1d1d;
+            --accent: #f97373;
+            --accent-strong: #ef4444;
+            --accent-neon: #facc15;
+            --text-main: #f9fafb;
+            --text-muted: #f3f4f6;
+            --card-bg: rgba(15, 23, 42, 0.92);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at 0% 0%, rgba(248, 113, 113, 0.25), transparent 55%),
+                radial-gradient(circle at 100% 100%, rgba(239, 68, 68, 0.25), transparent 55%),
+                linear-gradient(140deg, var(--bg-grad-1), var(--bg-grad-2));
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 32px 16px;
+            position: relative;
+        }
+
+        .orb {
+            position: fixed;
+            border-radius: 999px;
+            filter: blur(40px);
+            opacity: 0.7;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .orb.orb-1 {
+            width: 260px;
+            height: 260px;
+            background: rgba(239, 68, 68, 0.7);
+            top: -80px;
+            right: -40px;
+        }
+
+        .orb.orb-2 {
+            width: 320px;
+            height: 320px;
+            background: rgba(248, 250, 252, 0.15);
+            bottom: -120px;
+            left: -80px;
+        }
+
+        .wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 520px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 22px;
+            padding: 20px 20px 16px;
+            box-shadow:
+                0 24px 60px rgba(15, 23, 42, 0.9),
+                0 0 0 1px rgba(248, 250, 252, 0.08);
+            border: 1px solid rgba(248, 113, 113, 0.55);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 18px;
+            letter-spacing: 0.03em;
+        }
+
+        .sub {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .icon-wrapper {
+            width: 52px;
+            height: 52px;
+            border-radius: 18px;
+            background: radial-gradient(circle at 30% 30%, #fee2e2, var(--accent-strong));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f1d1d;
+            box-shadow:
+                0 0 20px rgba(248, 113, 113, 0.6),
+                inset 0 0 0 1px rgba(127, 29, 29, 0.8);
+        }
+
+        .icon-wrapper span {
+            font-size: 26px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+            max-height: 380px;
+            overflow-y: auto;
+        }
+
+        li {
+            background: rgba(15, 23, 42, 0.96);
+            color: var(--text-main);
+            margin: 8px 0;
+            padding: 10px 12px 9px;
+            border-radius: 14px;
+            text-align: left;
+            border: 1px solid rgba(248, 250, 252, 0.1);
+            box-shadow:
+                0 12px 28px rgba(15, 23, 42, 0.95);
+            font-size: 13px;
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .distance {
+            color: var(--accent-neon);
+            font-weight: 600;
+            font-size: 12px;
+            margin: 2px 0 4px;
+        }
+
+        .info {
+            color: var(--text-muted);
+            font-size: 12px;
+            margin: 1px 0;
+        }
+
+        .actions {
+            margin-top: 8px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 7px 12px;
+            margin: 0;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+            font-family: "Inter", sans-serif;
+        }
+
+        /* Primary red buttons (call/map) */
+        .btn-primary {
+            background: linear-gradient(135deg, #ef4444, #b91c1c);
+            color: white;
+            box-shadow:
+                0 10px 24px rgba(127, 29, 29, 0.9),
+                0 0 14px rgba(248, 113, 113, 0.65);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow:
+                0 14px 32px rgba(127, 29, 29, 1),
+                0 0 18px rgba(252, 165, 165, 0.85);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow:
+                0 8px 20px rgba(15, 23, 42, 1);
+        }
+
+        .btn-secondary {
+            background: rgba(15, 23, 42, 0.98);
+            color: var(--text-main);
+            border: 1px solid rgba(248, 250, 252, 0.32);
+            box-shadow:
+                0 10px 22px rgba(15, 23, 42, 0.95);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-1px);
+            box-shadow:
+                0 14px 28px rgba(15, 23, 42, 1),
+                0 0 12px rgba(248, 250, 252, 0.35);
+        }
+
+        /* 🔙 Back button – same behavior, restyled to match */
+        .back-btn {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            background: rgba(15, 23, 42, 0.98);
+            color: #fecaca;
+            font-weight: 600;
+            border-radius: 999px;
+            padding: 8px 14px;
+            cursor: pointer;
+            border: 1px solid rgba(254, 226, 226, 0.7);
+            box-shadow:
+                0 10px 22px rgba(15, 23, 42, 0.95);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 2;
+        }
+
+        .back-btn:hover {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🔙 Back Button -->
+<button class="back-btn" onclick="goBack()">
+    <span>⬅</span>
+    <span>Back</span>
+</button>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<div class="wrapper">
+    <div class="card">
+        <div class="header">
+            <div class="header-text">
+                <h2>🚑 Nearby Emergency Hospitals</h2>
+                <div class="sub">Finding the closest emergency care based on your location</div>
+            </div>
+            <div class="icon-wrapper">
+                <span>⚠️</span>
+            </div>
+        </div>
+
+        <ul id="hospitalList">
+            <li>
+                <div class="title">Locating emergency services…</div>
+                <div class="info">Please allow location access for accurate results.</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+// Back navigation
+function goBack() {
+    window.location.href = "first_page.html";
+}
+
+// Call hospital
+function callHospital(phone) {
+    window.location.href = `tel:${phone}`;
+}
+
+// Google Map
+function openMap(lat, lng) {
+    window.open(`https://www.google.com/maps?q=${lat},${lng}`);
+}
+
+// Get user location
+navigator.geolocation.getCurrentPosition(async (pos) => {
+    const lat = pos.coords.latitude;
+    const lon = pos.coords.longitude;
+
+    const res = await fetch(
+        `http://127.0.0.1:8000/emergency_hospitals?lat=${lat}&lon=${lon}`
+    );
+
+    const data = await res.json();
+
+    const list = document.getElementById("hospitalList");
+    list.innerHTML = "";
+
+    if (!data.hospitals.length) {
+        list.innerHTML = "<li><div class='title'>No emergency hospitals found</div></li>";
+        return;
+    }
+
+    data.hospitals.forEach(h => {
+        let callBtn = "";
+        if (h.phone) {
+            callBtn = `
+                <button class="btn-primary" onclick="callHospital('${h.phone}')">
+                    <span>📞</span>
+                    <span>Call</span>
+                </button>`;
+        }
+
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <div class="title">${h.title}</div>
+            <div class="distance">📍 ${h.distance} km away</div>
+            <div class="info">${h.address || "Address not available"}</div>
+            <div class="info">📞 ${h.phone || "No phone"}</div>
+            <div class="actions">
+                ${callBtn}
+                <button class="btn-secondary" onclick="openMap(${h.location.lat},${h.location.lng})">
+                    <span>🗺</span>
+                    <span>Map</span>
+                </button>
+            </div>
+        `;
+        list.appendChild(li);
+    });
+
+}, () => {
+    alert("Location permission needed for emergency services.");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,488 @@
+[{
+  "title": "Medikz Multispecialty Hub",
+  "categoryName": "Hospital",
+  "address": "opposite HAYAT Lounge Auditorium, Kurukathani, Perumanna Klari Gramapanchayat, Malappuram, Kerala 676551, India",
+  "city": "Perumanna Klari Gramapanchayat, Malappuram",
+  "phone": "+91 77365 54555",
+  "phoneUnformatted": "+917736554555",
+  "location": {
+    "lat": 10.9689651,
+    "lng": 75.9789228
+  },
+  "totalScore": 4.9,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 3
+},
+{
+  "title": "24/7 Emergency & Ambulance Services at Aster Emergency & Trauma Centre in Kottakkal",
+  "categoryName": "Emergency room",
+  "address": "NH 66, Calicut Rd, Kottakkal, Kerala 676503, India",
+  "city": "Kottakkal",
+  "phone": "+91 79 4281 0792",
+  "phoneUnformatted": "+917942810792",
+  "location": {
+    "lat": 10.9958394,
+    "lng": 75.9941623
+  },
+  "totalScore": 4.4,
+  "categories": [
+    "Emergency room",
+    "Emergency care physician",
+    "Emergency care service"
+  ],
+  "rank": 6
+},
+
+{
+  "title": "Almas Hospital",
+  "categoryName": "Hospital",
+  "address": "Changuvetty, Kottakkal, Kerala 676503, India",
+  "city": "Kottakkal, Changuvetty",
+  "phone": "+91 483 280 9100",
+  "phoneUnformatted": "+914832809100",
+  "location": {
+    "lat": 10.9999551,
+    "lng": 75.9909994
+  },
+  "totalScore": 4.3,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 9
+},
+{
+  "title": "HMS Hospital",
+  "categoryName": "Heart hospital",
+  "address": "Kanyakumari - Panvel Highway, near Mathrubhumi Office, Palathara, Kottakkal, Kerala 676510, India",
+  "city": "Palathara, Kottakkal",
+  "phone": "+91 494 260 5000",
+  "phoneUnformatted": "+914942605000",
+  "location": {
+    "lat": 10.9829745,
+    "lng": 75.9985981
+  },
+  "totalScore": 4.4,
+  "categories": [
+    "Heart hospital",
+    "Cardiologist",
+    "Doctor",
+    "Emergency care physician",
+    "Nephrologist",
+    "Pediatrician",
+    "Pulmonologist",
+    "Surgeon"
+  ],
+  "rank": 1
+},
+{
+  "title": "Aster MIMS Hospital, Kottakkal",
+  "categoryName": "Hospital",
+  "address": "NH 66, Calicut, Road, Changuvetty, Kerala 676503, India",
+  "city": "Changuvetty, Kottakkal",
+  "phone": "+91 483 712 7000",
+  "phoneUnformatted": "+914837127000",
+  "location": {
+    "lat": 10.9957907,
+    "lng": 75.9940584
+  },
+  "totalScore": 4.6,
+  "categories": [
+    "Hospital",
+    "Doctor",
+    "Family practice physician",
+    "Health consultant",
+    "Neurologist",
+    "Oncologist",
+    "Otolaryngologist",
+    "Surgeon"
+  ],
+  "rank": 6
+},
+{
+  "title": "Trust Hospital, Randathani",
+  "categoryName": "Hospital",
+  "address": "NH Randathani, Randathani, Kerala 676510, India",
+  "city": "Randathani",
+  "phone": "+91 92075 55355",
+  "phoneUnformatted": "+919207555355",
+  "location": {
+    "lat": 10.961472,
+    "lng": 76.0086748
+  },
+  "totalScore": 4,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 10
+},
+{
+  "title": "Nadakkavil Hospital",
+  "categoryName": "Private hospital",
+  "address": "V3VF+CXF, Maramkunnu Rd, Valanchery, Kerala 676552, India",
+  "city": "Valanchery",
+  "phone": "+91 99461 47238",
+  "phoneUnformatted": "+919946147238",
+  "location": {
+    "lat": 10.89348,
+    "lng": 76.074904
+  },
+  "totalScore": 4.3,
+  "categories": [
+    "Private hospital",
+    "General hospital",
+    "Hospital"
+  ],
+  "rank": 5
+},
+{
+  "title": "Nizar Hospital",
+  "categoryName": "Hospital",
+  "address": "Pattambi, Perinthalmanna Rd, Valanchery, Kerala 676552, India",
+  "city": "Valanchery",
+  "phone": "+91 70340 55724",
+  "phoneUnformatted": "+917034055724",
+  "location": {
+    "lat": 10.8858098,
+    "lng": 76.074009
+  },
+  "totalScore": 4.4,
+  "categories": [
+    "Hospital",
+    "General hospital"
+  ],
+  "rank": 6
+},
+{
+  "title": "MES-CH Hospital (CH MEMORIAL HOSPITAL)",
+  "categoryName": "Hospital",
+  "address": "Perinthalmanna Rd, near Police Station, Valanchery, Kerala 676552, India",
+  "city": "Valanchery",
+  "location": {
+    "lat": 10.8913653,
+    "lng": 76.0741264
+  },
+  "totalScore": 3.6,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 8
+},
+{
+  "title": "AL SALAM HOSPITAL",
+  "categoryName": "Hospital",
+  "address": "MEEMPARA, PO, THOZHUVANOOR HIGH SCHOOL ROAD, Valanchery, Kerala 676552, India",
+  "city": "Valanchery, Kavumpuram",
+  "phone": "+91 93872 38094",
+  "phoneUnformatted": "+919387238094",
+  "location": {
+    "lat": 10.8960764,
+    "lng": 76.0627921
+  },
+  "totalScore": 4.2,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 11
+},
+{
+  "title": "Kumber Hospital",
+  "categoryName": "Hospital",
+  "address": "V3JH+CV4, Valanchery Koppam Road, Vendallur Rd, Valanchery, Kerala 676552, India",
+  "city": "Valanchery",
+  "phone": "+91 494 264 4520",
+  "phoneUnformatted": "+914942644520",
+  "location": {
+    "lat": 10.881006,
+    "lng": 76.0797161
+  },
+  "totalScore": 4.8,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 2
+},
+{
+  "title": "Karuna Hospital",
+  "categoryName": "Hospital",
+  "address": "Pattambi Rd, Vadakancheri, Valanchery, Kerala 676552, India",
+  "city": "Valanchery",
+  "phone": "+91 494 264 4430",
+  "phoneUnformatted": "+914942644430",
+  "location": {
+    "lat": 10.8834088,
+    "lng": 76.0764278
+  },
+  "totalScore": 4.7,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 3
+},
+{
+  "title": "Al-Noor Hospital,Tirur",
+  "categoryName": "Hospital",
+  "address": "WWMM+9WQ, Thalakkadathur, Tirur, Kerala 676103, India",
+  "city": "Tirur",
+  "phone": "+91 494 258 6835",
+  "phoneUnformatted": "+914942586835",
+  "location": {
+    "lat": 10.9334625,
+    "lng": 75.9348594
+  },
+  "totalScore": 3.5,
+  "categories": [
+    "Hospital",
+    "Diagnostic center",
+    "Pharmacy"
+  ],
+  "rank": 1
+},
+{
+  "title": "Kambath Medical Centre",
+  "categoryName": "Medical Center",
+  "address": "Ovungal - Areekkad Rd, Thalakkadathur, Tirur, Kerala 676103, India",
+  "city": "Tirur",
+  "phone": "+91 494 258 6586",
+  "phoneUnformatted": "+914942586586",
+  "location": {
+    "lat": 10.944825,
+    "lng": 75.940329
+  },
+  "totalScore": 4.5,
+  "categories": [
+    "Medical Center"
+  ],
+  "rank": 2
+},
+{
+  "title": "Saleema Hospital",
+  "categoryName": "Hospital",
+  "address": "WWPP+PHC, SH 71, Thalakkadathur, Tirur, Kerala 676103, India",
+  "city": "Tirur",
+  "location": {
+    "lat": 10.9368157,
+    "lng": 75.9363897
+  },
+  "totalScore": 2.8,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 3
+},
+{
+  "title": "Al Salama diagnostic centre (GAMCA)",
+  "categoryName": "Medical Center",
+  "address": "WWPP+PHC, SH 71, Thalakkadathur, Tirur, Kerala 676103, India",
+  "city": "Tirur",
+  "location": {
+    "lat": 10.9367616,
+    "lng": 75.9365163
+  },
+  "totalScore": 3.8,
+  "categories": [
+    "Medical Center"
+  ],
+  "rank": 6
+},
+{
+  "title": "Aster MIMS Emergency Department TNH",
+  "categoryName": "Emergency room",
+  "address": "WW7F+G26, Hospital Road, Tirur, Kerala 676101, India",
+  "city": "Tirur",
+  "location": {
+    "lat": 10.9137918,
+    "lng": 75.9225041
+  },
+  "totalScore": 5,
+  "categories": [
+    "Emergency room"
+  ],
+  "rank": 10
+},
+{
+  "title": "TIRUR CITY HOSPITAL",
+  "categoryName": "Hospital",
+  "address": "Tirur, Kerala 676101, India",
+  "city": "Tirur",
+  "phone": "+91 494 243 0091",
+  "phoneUnformatted": "+914942430091",
+  "location": {
+    "lat": 10.9200543,
+    "lng": 75.9271654
+  },
+  "totalScore": 3.4,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 11
+},{
+  "title": "St.Mary's Hospital",
+  "categoryName": "Hospital",
+  "address": "Karinkallathani, NH 966, Thazhekode, Kerala 679341, India",
+  "city": "Thazhekode",
+  "phone": "+91 4933 251 224",
+  "phoneUnformatted": "+914933251224",
+  "location": {
+    "lat": 10.9529778,
+    "lng": 76.3108409
+  },
+  "totalScore": 4,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 1
+},
+{
+  "title": "Drs Sevana Hospital",
+  "categoryName": "Hospital",
+  "address": "Theyyotuchira road, 55th Mile, Mannarkkad Road, 55th Mile, Kerala 679341, India",
+  "city": null,
+  "phone": "+91 75580 18000",
+  "phoneUnformatted": "+917558018000",
+  "location": {
+    "lat": 10.9763631,
+    "lng": 76.3629503
+  },
+  "totalScore": 4.5,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 14
+},
+{
+  "title": "Government District Hospital, Perinthalmanna",
+  "categoryName": "Government hospital",
+  "address": "Indus Motors, KSHB Colony, Perinthalmanna, Kerala 679322, India",
+  "city": "Perinthalmanna",
+  "phone": "+91 94959 99325",
+  "phoneUnformatted": "+919495999325",
+  "location": {
+    "lat": 10.9744044,
+    "lng": 76.2319345
+  },
+  "totalScore": 3.7,
+  "categories": [
+    "Government hospital",
+    "Ambulance service",
+    "Blood bank",
+    "Blood donation center",
+    "Blood testing service",
+    "General hospital"
+  ],
+  "reviewsDistribution": {
+    "oneStar": 28,
+    "twoStar": 5,
+    "threeStar": 10,
+    "fourStar": 44,
+    "fiveStar": 62
+  },
+  "rank": 23
+},
+{
+  "title": "EMS Memorial Co-operative Hospital & Research Centre Ltd",
+  "categoryName": "Hospital",
+  "address": "Panambi, Perinthalmanna, Kerala 679322, India",
+  "city": "Perinthalmanna",
+  "phone": "+91 4933 276 005",
+  "phoneUnformatted": "+914933276005",
+  "location": {
+    "lat": 10.9764443,
+    "lng": 76.255235
+  },
+  "totalScore": 3.6,
+  "categories": [
+    "Hospital",
+    "Doctor"
+  ],
+  "reviewsDistribution": {
+    "oneStar": 173,
+    "twoStar": 18,
+    "threeStar": 53,
+    "fourStar": 149,
+    "fiveStar": 313
+  },
+  "rank": 25
+},
+{
+  "title": "EMS CASUALTY",
+  "categoryName": "Hospital",
+  "address": "EMS Hospital OP Block, Kerala 679322, India",
+  "city": null,
+  "phone": "+91 4933 302 015",
+  "phoneUnformatted": "+914933302015",
+  "location": {
+    "lat": 10.9765214,
+    "lng": 76.2552395
+  },
+  "totalScore": 4,
+  "categories": [
+    "Hospital"
+  ],
+  "reviewsDistribution": {
+    "oneStar": 0,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 1,
+    "fiveStar": 0
+  },
+  "rank": 26
+},
+{
+  "title": "Super Speciality Block, EMS HOSPITAL",
+  "categoryName": "Hospital",
+  "address": "X7G4+53P, Perinthalmanna, Kerala 679322, India",
+  "city": "Perinthalmanna",
+  "location": {
+    "lat": 10.9754657,
+    "lng": 76.2551933
+  },
+  "totalScore": 5,
+  "categories": [
+    "Hospital"
+  ],
+  "reviewsDistribution": {
+    "oneStar": 0,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 0,
+    "fiveStar": 4
+  },
+  "rank": 30
+},
+{
+  "title": "MINI HOSPITAL",
+  "categoryName": "Hospital",
+  "address": "Chemmaniyode - Thellakad Rd, Melattur, Kerala 679325, India",
+  "city": "Melattur",
+  "phone": "+91 75104 36016",
+  "phoneUnformatted": "+917510436016",
+  "location": {
+    "lat": 11.0555281,
+    "lng": 76.2749262
+  },
+  "totalScore": 4,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 11
+},
+{
+  "title": "Al Salama Hospital",
+  "categoryName": "Hospital",
+  "address": "375F+RPJ, Melattur, Kerala 679326, India",
+  "city": "Melattur",
+  "phone": "+91 75104 36016",
+  "phoneUnformatted": "+917510436016",
+  "location": {
+    "lat": 11.0595919,
+    "lng": 76.274259
+  },
+  "totalScore": 3.2,
+  "categories": [
+    "Hospital"
+  ],
+  "rank": 13
+}
+]
